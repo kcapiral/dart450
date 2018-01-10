@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #581ED4;
+  height: 250vh;
+	font-size: 8px;
+}
+
+#text-container {
+  font-family: 'Heebo', sans-serif;
+  font-size: 2em;
+  color: #C6F5EE;
+  width: 100%;
+  height: 50%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: fixed;
+}
+
+.line-separator {
+  margin: 24px 0;
+  border-bottom: 1.5px solid #ffffff;
+  width: 200px;
+}
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.img-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  z-index: -1000;
+}
+
+img {
+  position: fixed;
+  margin-top: 24px;
+}
+
+.content {
+  font-family: 'Heebo', sans-serif;
+  font-size: 30em;
+  color: #C6F5EE;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 25vh;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  opacity: 1;
+  transition: 1s;
+}
+
+a:hover {
+  opacity: 0;
+}
