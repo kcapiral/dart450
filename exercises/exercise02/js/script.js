@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     if (circleId == 'circle1') {
       $(this).css({
-        backgroundColor: '#E4DEE0'
+        backgroundColor: '#FFFFFF'
       }).toggle('drop');
     }
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
   });
 
   $('.thirdLine').on('click', function() {
-    $('#header').hide();
+    $('#header').hide('slide', {direction: 'left'});
   });
 
 })
