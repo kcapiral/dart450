@@ -2,7 +2,7 @@ DART 450, Winter 2018
 Midterm
 Kathleen Capiral
 
-Distraction
+Distractions
 
 The internet can be your friend or it can be your enemy. It is the epitome of distraction and in this case, the user plays as a character and can navigate on a platform-based world. The distractions are viewed as overwhelming advertisement boards that are continuously in the character’s face. At each distraction, the user may interact with it and essentially, be distracted. Personally, the internet has always been a big part of my life because as a child and I grew up liking even to this day, 1990 animes such as Sailormoon and videogames from the Nintendo universe. It has impacted me even to this day where I use the internet mainly to play online games and watch anime. The webpage is also a contribution to the idea of “internet ugly” because although I didn’t know it was an actual concept, the internet ugly was something I was very familiar with and even integrated in my online persona.
 
