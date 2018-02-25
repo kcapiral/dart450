@@ -4,7 +4,9 @@ DART 450, Winter 2018
 Midterm
 Kathleen Capiral
 
-Description of project and purpose of HTML...
+Distractions is an interactive platform webpage which the user plays as
+a character while navigating and exploring through a mashup of 1990's inspired
+virtual world.
 
 ************************************************************************ -->
 
@@ -12,18 +14,55 @@ Description of project and purpose of HTML...
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Week 05</title>
+    <title>Distractions</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!-- Include jQuery via the CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Uncomment the lines below to include jQuery UI -->
-    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
-    <!-- Include the script file -->
     <script src="js/script.js"></script>
   </head>
   <body>
-    <div class="title">Fill the spectrum</div>
-    <div id="counter"></div>
+    <div id="gameContainer">
+      <div id="gameBackground">
+        <div id="textContainer">
+            <div class="blink interactiveText"></div>
+            <div class="blink changeText">(HIT SPACEBAR!!!)</div>
+        </div>
+        <div id="imageBackground">
+
+          <!-- place your foreground items here -->
+          <div class="foreground" id="youtube">
+            <img src="img/sailormoon.png">
+          </div>
+          <div class="foreground" id="ninegag">
+            <img src="img/mario.gif">
+          </div>
+          <div class="foreground" id="dog">
+            <img src="https://orig00.deviantart.net/9d7c/f/2014/227/3/1/more_dogs_by_zedotagger-d7v9hmr.gif" />
+          </div>
+          <div class="foreground" id="spotify">
+            <img src="img/spotify.png" />
+          </div>
+          <div class="foreground" id="facebook">
+            <img src="img/facebook.svg" />
+          </div>
+          <div class="foreground" id="block">
+            <img src="img/block.png" />
+          </div>
+          <!-- place foreground items above -->
+          <img id="movingBackground" src="img/background.png" />
+        </div>
+      </div>
+      <div id="character">
+        <img id="charGif" src="img/ditto.gif" />
+      </div>
+    </div>
+      <img id="doggo0" class="doggos" src="img/doge.jpg" />
+      <img id="doggo1" class="doggos" src="img/doge-1.jpg" />
+      <img id="doggo2" class="doggos" src="img/doge-2.jpg" />
+    <div id="instructionContainer">
+      <div class="instructionText">
+        Move character '<' or '>'.
+      </div>
+    </div>
   </body>
 </html>
