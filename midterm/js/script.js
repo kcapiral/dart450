@@ -89,7 +89,6 @@ function moveLeft() {
   if (characterPos > 50 && characterPos <= 500) {
     $('#character').css('marginLeft', '-=' + OFFSET);
     characterPos -= OFFSET;
-    console.log(characterPos);
   } else if (characterPos > 1500 && characterPos <= 1950) {
     $('#character').css('marginLeft', '-=' + OFFSET);
     characterPos -= OFFSET;
@@ -100,11 +99,9 @@ function moveLeft() {
 }
 
 function moveRight() {
-  console.log(characterPos);
   if (characterPos >= 50 && characterPos < 500) {
     $('#character').css('marginLeft', '+=' + OFFSET);
     characterPos += OFFSET;
-    console.log(characterPos);
   } else if (characterPos >= 1500 && characterPos < 1950) {
     $('#character').css('marginLeft', '+=' + OFFSET);
     characterPos += OFFSET;
