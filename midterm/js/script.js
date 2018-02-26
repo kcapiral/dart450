@@ -125,7 +125,7 @@ function doInteraction() {
       break;
     case 'SPOTIFY':
       audio.pause();
-      audio.src = '../audio/made_in_abyss.mp3';
+      audio.src = 'https://raw.githubusercontent.com/kcapiral/dart450/master/midterm/audio/pokemon.mp3';
       audio.play();
       break;
     case 'DOGGOS':
