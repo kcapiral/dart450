@@ -54,6 +54,7 @@ $(document).ready(function() {
   $('#textContainer').hide();
 
   audio = new Audio('../audio/pokemon.mp3');
+  audio.crossOrigin = 'anonymous';
   audio.play();
 
   $(document).keydown(function(e) {
