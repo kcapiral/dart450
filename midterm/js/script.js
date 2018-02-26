@@ -53,7 +53,7 @@ $(document).ready(function() {
 
   $('#textContainer').hide();
 
-  audio = new Audio('../audio/pokemon.mp3');
+  audio = new Audio('https://raw.githubusercontent.com/kcapiral/dart450/master/midterm/audio/pokemon.mp3');
   audio.crossOrigin = 'anonymous';
   audio.play();
 
