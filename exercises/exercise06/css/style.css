@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background-color: yellow;
+}
+
+#container {
+  width: 100vw;
+  position: absolute;
+  /* bottom: 0; */
+  font-family: 'VT323', monospace;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 2.5rem;
+}
+
+.secretText {
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+.blast {
+  background-color: black;
+}
