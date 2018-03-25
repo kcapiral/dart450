@@ -1,0 +1,53 @@
+/************************************************************************
+
+DART 450, Winter 2018
+Final
+Kathleen Capiral
+
+Description
+
+************************************************************************/
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #000000;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1rem;
+  color: #00FF3B;
+}
+
+#container {
+  margin: 25px;
+}
+
+#mainTextContainer {
+  margin-bottom: 25px;
+}
+
+.cursor {
+  width: 0.5rem;
+  height: 1rem;
+  background: #00FF3B;
+  position: absolute;
+}
+
+.mainCommandDescriptionContainer {
+  margin-bottom: 25px;
+}
+
+.command {
+  color: blue;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00FF3B;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1rem;
+}
