@@ -9,43 +9,54 @@ Description
 
 $(document).ready(function() {
 
-  $('#userInput').keypress(function(event) {
-    if (event.which == 13) {
+      // Set variable to current date and time
+      const now = new Date();
+      var show = now.toString();
 
-      var userCommand = $('#userInput').val();
+      // View the output
+      console.log(now);
 
-      //Insert command
-      $('<div class="command">Kathleens-MacBook-Pro:~ Kathleen$ ' + userCommand + '</div>').insertBefore('#userLine');
-      $('#userInput').val('');
+      $('#userInput').keypress(function(event) {
+        if (event.which == 13) {
 
-      //Check user command
-      //eg. clear, help
+          var userCommand = $('#userInput').val();
 
-      switch (userCommand) {
-        case 'clear':
-          clearCommand();
-          break;
-        case 'help':
-          helpCommand();
-          break;
-        case 'read':
-          readCommand();
-          break;
-        case 'location':
-          locationCommand();
-          break;
-        case 'download':
-            downloadCommand();
-            break;
-        default:
-          invalidCommand();
-          break;
-      }
+          //Insert command
+          $('<div class="command">Kathleens-MacBook-Pro:~ Kathleen$ ' + userCommand + '</div>').insertBefore('#userLine');
+          $('#userInput').val('');
 
-    }
-  });
-  (function pulse() {
-    $('.cursor').delay(200).fadeOut('slow').delay(50).fadeIn('slow', pulse);
-  })();
+          //Check user command
+          //eg. clear, help
 
-});
+          switch (userCommand) {
+            case 'clear':
+              clearCommand();
+              break;
+            case 'help':
+              helpCommand();
+              break;
+            case 'read':
+              readCommand();
+              break;
+            case 'location':
+              locationCommand();
+              break;
+            case 'download':
+              downloadCommand();
+              break;
+            case 'exit':
+              exitCommand();
+              break;
+            default:
+              invalidCommand();
+              break;
+          }
+
+        }
+      });
+
+      (function pulse() {
+        $('.cursor').delay(200).fadeOut('slow').delay(50).fadeIn('slow', pulse);
+      })();
+
+      });
