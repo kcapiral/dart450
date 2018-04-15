@@ -16,7 +16,7 @@ Description
 body {
   background-color: #000000;
   font-family: 'Source Code Pro', monospace;
-  font-size: 1rem;
+  font-size: 16px;
   color: #00FF3B;
 }
 
@@ -26,6 +26,7 @@ body {
 
 #mainTextContainer {
   margin-bottom: 25px;
+  font-size: 1rem;
 }
 
 .cursor {
@@ -49,5 +50,9 @@ input {
   outline: none;
   color: #00FF3B;
   font-family: 'Source Code Pro', monospace;
+  font-size: 1rem;
+}
+
+.activeText {
   font-size: 1rem;
 }
