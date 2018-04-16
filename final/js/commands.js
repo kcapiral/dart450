@@ -15,7 +15,7 @@ Each command is listed here with it's respective function.
 
 
 function clearCommand() {
-  let updateInterval = 50;  
+  let updateInterval = 25;  
 
   let randomBinaryDiv = $('<div style="word-wrap:break-word" class="activeText">' +
     Math.floor(Math.random() * 2) +
@@ -73,7 +73,8 @@ function helpCommand() {
     // 'read<br>' +
     // 'ls<br>' +
     'help<br>' +
-    'clear<br>'
+    'clear<br>' +
+    'exit'
     // 'other'
   ]
 
@@ -82,6 +83,7 @@ function helpCommand() {
   $('<div class="activeText">' +
     lifeProTips[randomNumber] +
     '</div>').insertBefore('#userLine');
+
 }
 
 
@@ -96,7 +98,7 @@ function invalidCommand() {
     'Invalid command.',
     "That's not quite right",
     'Are you stupid?',
-    "Here's a tip.Type help",
+    "Here's a tip. Type 'help'",
     'Wrong answer.',
     'Have you ever even used a terminal before!'
   ]
@@ -145,17 +147,47 @@ function downloadCommand() {
 
 
 function exitCommand() {
-  let myWindow = window.open("", "MsgWindow", "width=1000,height=1000");
+  let myWindow = window.open('MsgWindow', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400');
+  let facebookWindow = window.open('https://www.facebook.com', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=400,height=400');
+  let twitterWindow = window.open('https://www.twitter.com', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=200,width=400,height=400');
+  let instagramWindow = window.open('https://www.instagram.com', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=600,left=0,width=400,height=400');
+  let pinterestWindow = window.open('https://www.pinterest.com', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=800,left=1000,width=400,height=400');
+
   myWindow.document.write("<p>Please don't leave. We're not done yet.</p>");
-  window.open('', 'MsgWindow', 'width=500,height=500');
-  window.open('', 'MsgWindow', 'width=200,height=500');
-  window.open('', 'MsgWindow', 'width=100,height=500');
+
+  $('<div class="activeText">' +
+    'logout<br>' +
+    'Saving session...<br>' +
+    '...copying shared history...<br>' +
+    '...saving history...truncating history files...<br>' +
+    '...completed.<br>' +
+    'Broadcasting live stream...<br>' +
+    'Posting session on Facebook, Twitter, Instagram, Pinterest...<br>' +
+    '[Process completed]<br>' +
+    '</div>').insertBefore('#userLine');
+
 }
+
 
 // [close]
 // When user tries to close the tab or browser,
 // show a message.
 
-// $( window ).unload(function() {
+// $(window).unload(function() {
 //   return "Bye now!";
 // });
+
+
+// [info]
+// Show user information such as
+// user picture, name, date of birth, location, favorite color.
+
+function infoCommand() {
+  $('<div class="activeText">' +
+    'Name: <br>' +
+    'Image: <br>' +
+    'Date of birth: <br>' +
+    'Location: <br>' +
+    'Likes the color: <br>' +
+    '</div>').insertBefore('#userLine');
+}

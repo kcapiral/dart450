@@ -56,3 +56,11 @@ input {
 .activeText {
   font-size: 1rem;
 }
+
+/*DESKTOP: 1920PX AND HIGHER*/
+@media only screen and (min-width: 1920px) {
+  #mainTextContainer {font-size: 4rem;}
+  #cursor {font-size: 4rem;}
+  input {font-size: 4rem;}
+  .activeText {font-size: 4rem;}
+}

@@ -27,7 +27,7 @@ $(document).ready(function() {
         $('#userLine').text($('#userName').val());
       }
 
-
+      // Stores user's input information
       let userCommand = $('#userInput').val();
 
       //Insert command
@@ -38,15 +38,18 @@ $(document).ready(function() {
       //Check user command
       //eg. clear, help
       switch (userCommand) {
-        case 'clear':
-          clearCommand();
-          break;
         case 'help':
           helpCommand();
           break;
           // case 'location':
           //   locationCommand();
           //   break;
+        case 'info':
+          infoCommand();
+          break;
+        case 'clear':
+          clearCommand();
+          break;
         case 'exit':
           exitCommand();
           break;
