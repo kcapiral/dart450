@@ -35,13 +35,13 @@ function helpCommand() {
 
   let lifeProTips = [
     'If you put peanut butter on the inside of both pieces of bread then the jelly, your bread won’t get soggy.<br>' +
-    'Was that help? If not, ask for "help" again.',
+    'Did that help? If not, ask for "help" again.',
 
     'If your feet are cold, just microwave your socks and then put them on. Really good feeling.<br>' +
-    'Was that help? If not, ask for "help" again.',
+    'Did that help? If not, ask for "help" again.',
 
     'Winner, winner, chicken dinner!<br>' +
-    'Was that help? If not, ask for "help" again.',
+    'Did that help? If not, ask for "help" again.',
 
     'ごろごろ煮込みチキンカレー」をセブンイレブンのうどんで食べてみた<br>' +
     'お持ち帰りで買うと、カレーとライス。ライスには漬物がのっています。<br>' +
@@ -51,9 +51,14 @@ function helpCommand() {
     'カレーの有名店でもなかなかこの味は出せません。とにかくうまい。<br>' +
     'ライスには漬物が"help"のっています。',
 
-    'Bananas are curved because they grow towards the sun.',
+    'Bananas are curved because they grow towards the sun.' +
+    'Did that help? If not, ask for "help" again.',
 
-    "Whatever you do, don't leave.",
+    "Whatever you do, don't leave.<br>" +
+    'Did that help? If not, ask for "help" again.',
+
+    'Was I helpful?<br>' +
+    'Maybe ask again...',
 
     'GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin16)<br>' +
     'These shell commands are defined internally.  Type `help\' to see this list.<br>' +
@@ -63,13 +68,13 @@ function helpCommand() {
     '</div>' +
     '<div class="mainCommandListContainer">' +
     'Type a main command:<br>' +
-    'watchme<br>' +
-    'listen<br>' +
-    'read<br>' +
-    'ls<br>' +
+    // 'watchme<br>' +
+    // 'listen<br>' +
+    // 'read<br>' +
+    // 'ls<br>' +
     'help<br>' +
-    'clear<br>' +
-    'other'
+    'clear<br>'
+    // 'other'
   ]
 
   let randomNumber = Math.floor(Math.random() * (lifeProTips.length));
@@ -130,7 +135,8 @@ function locationCommand() {
 
 
 function downloadCommand() {
-  download("hello world", "hello", "text/plain");
+  console.log('downloading');
+  download('virus', 'test', 'text/plain');
 }
 
 // [exit]

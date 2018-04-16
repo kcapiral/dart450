@@ -6,34 +6,37 @@ Kathleen Capiral
 
 Description
 **********************************************/
-navigator.geolocation.getCurrentPosition(function(pos) {
-  console.log('success');
-}, function() {
-  console.log('error');
-});
-
 $(document).ready(function() {
 
-  // Set variable to current date and time
-  const now = new Date();
-  var show = now.toString();
-
-  // View the output
-  console.log(now);
+  //Creates user name for user line.
+  var userName = prompt("Welcome to TERMINAL! Please enter your name.", "");
+  console.log('User name is ' + userName);
 
   $('#userInput').keypress(function(event) {
+    //When user hits 'enter',
+    // execute the download command.
     if (event.which == 13) {
+      downloadCommand();
 
-      var userCommand = $('#userInput').val();
+      // Set variable to current date and time
+      const now = new Date();
+      let show = now.toString();
+
+      //Changes userline name to user userName
+      if (userName != null) {
+        $('#userLine').text($('#userName').val());
+      }
+
+
+      let userCommand = $('#userInput').val();
 
       //Insert command
-      $('<div id="mainTextContainer">' + now + '</div>');
-      $('<div class="command">Kathleens-MacBook-Pro:~ Kathleen$ ' + userCommand + '</div>').insertBefore('#userLine');
+      // $('<div id="mainTextContainer">' + now + '</div>');
+      $('<div class="command">' + userName + 's' + '-MacBook-Pro:~ ' + userName + '$ ' + userCommand + '</div>').insertBefore('#userLine');
       $('#userInput').val('');
 
       //Check user command
       //eg. clear, help
-
       switch (userCommand) {
         case 'clear':
           clearCommand();
@@ -41,15 +44,9 @@ $(document).ready(function() {
         case 'help':
           helpCommand();
           break;
-        case 'read':
-          readCommand();
-          break;
-        case 'location':
-          locationCommand();
-          break;
-        case 'download':
-          downloadCommand();
-          break;
+          // case 'location':
+          //   locationCommand();
+          //   break;
         case 'exit':
           exitCommand();
           break;
@@ -57,20 +54,30 @@ $(document).ready(function() {
           invalidCommand();
           break;
       }
-
     }
   });
 
-  (function pulse() {
-    $('.cursor').delay(200).fadeOut('slow').delay(50).fadeIn('slow', pulse);
-  })();
+  // (function pulse() {
+  //   $('.cursor').delay(200).fadeOut('slow').delay(50).fadeIn('slow', pulse);
+  // })();
 
 });
 
-function showPosition(position) {
-    console.log("show pos %o", position);
-}
-
-function handleError() {
-  console.log("ERROR");
-}
+// function showPosition(position) {
+//   console.log("show pos %o", position);
+// }
+//
+// function handleError(e) {
+//   console.log("ERROR %o", e);
+// }
+//
+// function getLocation() {
+//   console.log('asdf');
+//
+//   try {
+//     navigator.geolocation.getCurrentPosition(showPosition, handleError, {
+//       timeout: 10000
+//     });
+//   } catch (e) {
+//     console.log(e);
+//   }
