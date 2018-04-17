@@ -9,8 +9,8 @@ Description
 $(document).ready(function() {
 
   //Creates user name for user line.
-  var userName = prompt("Welcome to TERMINAL! Please enter your name.", "");
-  console.log('User name is ' + userName);
+  let userName = prompt('Welcome to TERMINAL! Please enter your name.', '');
+      $('<div id="userLine">' + userName + 's-MacBook-Pro:~ ' + userName + '$ <input id="userInput"type="text" autofocus/></div>').appendTo('#mainTextContainer');
 
   $('#userInput').keypress(function(event) {
     //When user hits 'enter',
@@ -46,6 +46,9 @@ $(document).ready(function() {
           //   break;
         case 'info':
           infoCommand();
+          break;
+        case 'customize':
+          customizeCommand();
           break;
         case 'clear':
           clearCommand();

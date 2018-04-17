@@ -183,11 +183,53 @@ function exitCommand() {
 // user picture, name, date of birth, location, favorite color.
 
 function infoCommand() {
+  $('.my_camera').remove();
+
   $('<div class="activeText">' +
     'Name: <br>' +
-    'Image: <br>' +
     'Date of birth: <br>' +
     'Location: <br>' +
     'Likes the color: <br>' +
-    '</div>').insertBefore('#userLine');
+    '</div>' +
+    '<div class="my_camera" style="width:320px; height:240px;"></div>'
+  ).insertBefore('#userLine');
+
+  take_snapshot();
+
+}
+
+function take_snapshot() {
+  Webcam.attach('.my_camera');
+
+  Webcam.snap(function(data_uri) {
+    document.getElementsByClassName('my_result')[0].innerHTML = '<img src="' + data_uri + '"/>';
+  });
+}
+
+
+// [customize]
+// Allows user to generate random color themes.
+
+function customizeCommand() {
+  // let themeBlue = $('#mainTextContainer, #userInput').css({color:'blue'});
+  // let themeYellow = $('#mainTextContainer, #userInput').css({color:'yellow'});
+  //
+  // let customizeTheme = [themeBlue, themeYellow]
+  //
+  // let randomTheme = Math.floor(Math.random());
+  //
+  // $('<div class="activeText">' +
+  //   customizeTheme[randomTheme] +
+  //   '</div>').insertBefore('#userLine');
+
+  let backgroundColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  $('body').css("background",backgroundColor);
+  // let fontColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  // $('#userInput').css('color', fontColor);
+  // let commandColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  // $('.command').css('color', commandColor);
+  // let userLineColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  // $('#userLine').css('color', userLineColor);
+  // let activeTextColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  // $('.activeText').css('color', activeTextColor);
 }
