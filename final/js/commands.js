@@ -73,6 +73,8 @@ function helpCommand() {
     // 'read<br>' +
     // 'ls<br>' +
     'help<br>' +
+    'info<br>' +
+    'customize<br>' +
     'clear<br>' +
     'exit'
     // 'other'
