@@ -4,7 +4,7 @@ DART 450, Winter 2018
 Final
 Kathleen Capiral
 
-This file stores all the command lines the user will input.
+Command.js stores all the command lines the user will input.
 Each command is listed here with it's respective function.
 **********************************************/
 
@@ -13,6 +13,14 @@ Each command is listed here with it's respective function.
 // When user wants to 'clear' the terminal,
 // fill terminal with binaries instead.
 
+console.log("Looks like you found a shortcut.")
+console.log("Here are the following commands:")
+console.log("help")
+console.log("clear")
+console.log("info")
+console.log("download")
+console.log("customize")
+console.log("exit")
 
 function clearCommand() {
   let updateInterval = 25;  
@@ -74,6 +82,7 @@ function helpCommand() {
     // 'ls<br>' +
     'help<br>' +
     'info<br>' +
+    'download<br>' +
     'customize<br>' +
     'clear<br>' +
     'exit'
@@ -140,7 +149,20 @@ function locationCommand() {
 
 function downloadCommand() {
   console.log('downloading');
-  download('virus', 'test', 'text/plain');
+  download('Are you scared? Well you should be.', 'virus', 'text/plain');
+
+  let downloadResponses = [
+    'Downloading virus',
+    "Downloading illegal videos",
+    'Your computer will now shutdown',
+    "Downloading cute pug images",
+    'Taking control of your computer',
+    'Detonating in three, two, one, boom'
+  ]
+
+  let randomResponse = Math.floor(Math.random() * (downloadResponses.length));
+
+  responsiveVoice.speak(downloadResponses[randomResponse]);
 }
 
 // [exit]
@@ -226,12 +248,12 @@ function customizeCommand() {
 
   let backgroundColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
   $('body').css("background",backgroundColor);
-  // let fontColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-  // $('#userInput').css('color', fontColor);
-  // let commandColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-  // $('.command').css('color', commandColor);
-  // let userLineColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-  // $('#userLine').css('color', userLineColor);
-  // let activeTextColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-  // $('.activeText').css('color', activeTextColor);
+  let fontColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  $('#userInput').css('color', fontColor);
+  let commandColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  $('.command').css('color', commandColor);
+  let userLineColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  $('#userLine').css('color', userLineColor);
+  let activeTextColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  $('.activeText').css('color', activeTextColor);
 }

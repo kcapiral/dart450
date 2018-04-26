@@ -4,25 +4,24 @@ DART 450, Winter 2018
 Final
 Kathleen Capiral
 
-Description
+Script.js contains the codes for the user name, user line, user input, user command input
+and the reverse geolocation.
 **********************************************/
 $(document).ready(function() {
 
   //Creates user name for user line.
-  let userName = prompt('Welcome to TERMINAL! Please enter your name.', '');
+  let userName = prompt('Welcome to Terminal 20.1.8! Please enter your name.', '');
       $('<div id="userLine">' + userName + 's-MacBook-Pro:~ ' + userName + '$ <input id="userInput"type="text" autofocus/></div>').appendTo('#mainTextContainer');
 
   $('#userInput').keypress(function(event) {
-    //When user hits 'enter',
-    // execute the download command.
+    //Listens for enter keypress
     if (event.which == 13) {
-      downloadCommand();
 
       // Set variable to current date and time
       const now = new Date();
       let show = now.toString();
 
-      //Changes userline name to user userName
+      //Changes user line name to user userName
       if (userName != null) {
         $('#userLine').text($('#userName').val());
       }
@@ -46,6 +45,9 @@ $(document).ready(function() {
           //   break;
         case 'info':
           infoCommand();
+          break;
+        case 'download':
+          downloadCommand();
           break;
         case 'customize':
           customizeCommand();
