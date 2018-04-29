@@ -1,4 +1,4 @@
-DART 450, Winter 2018 // Final //Kathleen Capiral
+DART 450, Winter 2018 // Final // Kathleen Capiral
 
 ### Terminal 20.1.8
 
