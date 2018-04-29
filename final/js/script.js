@@ -11,7 +11,7 @@ $(document).ready(function() {
 
   //Creates user name for user line.
   let userName = prompt('Welcome to Terminal 20.1.8! Please enter your name.', '');
-      $('<div id="userLine">' + userName + 's-MacBook-Pro:~ ' + userName + '$ <input id="userInput"type="text" autofocus/></div>').appendTo('#mainTextContainer');
+  $('<div id="userLine">' + userName + 's-MacBook-Pro:~ ' + userName + '$ <input id="userInput"type="text" autofocus/></div>').appendTo('#mainTextContainer');
 
   $('#userInput').keypress(function(event) {
     //Listens for enter keypress
@@ -71,21 +71,56 @@ $(document).ready(function() {
 
 });
 
-// function showPosition(position) {
-//   console.log("show pos %o", position);
-// }
-//
-// function handleError(e) {
-//   console.log("ERROR %o", e);
-// }
-//
-// function getLocation() {
-//   console.log('asdf');
-//
-//   try {
-//     navigator.geolocation.getCurrentPosition(showPosition, handleError, {
-//       timeout: 10000
-//     });
-//   } catch (e) {
-//     console.log(e);
-//   }
+function showPosition(position) {
+  geocodeLatLng(position.coords.latitude, position.coords.longitude);
+}
+
+function handleError(e) {
+  console.log("ERROR %o", e);
+}
+
+function getLocation() {
+  console.log('asdf');
+
+  try {
+    navigator.geolocation.getCurrentPosition(showPosition, handleError, {
+      maximumAge: 0
+    });
+  } catch (e) {
+    console.log(e);
+  }
+
+}
+
+function geocodeLatLng(lat, lng) {
+  var geocoder = new google.maps.Geocoder;
+  var latlng = {
+    lat: lat,
+    lng: lng
+  };
+  geocoder.geocode({
+    'location': latlng
+  }, function(results, status) {
+    if (status === 'OK') {
+      if (results[0]) {
+        $(window).mouseleave(function() {
+          alert("DON'T LEAVE!!! I KNOW WHERE YOU LIVE: " + results[0].formatted_address);
+        });
+        console.log("%o", results[0]);
+      } else {
+        window.alert('No results found');
+      }
+    } else {
+      window.alert('Geocoder failed due to: ' + status);
+    }
+  });
+}
+
+//Google script calls initMap
+function initMap() {
+  getLocation();
+}
+
+
+
+// latitude: 45.4426899, longitude: -73.4922982

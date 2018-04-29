@@ -4,6 +4,9 @@ Kathleen Capiral
 
 Terminal 20.1.8
 
+***DISCLAIMER***
+Please disable popup blocks, allow access to location and webcam.
+
 Concept
 Terminal 20.1.8 is a webpage that reflects on web intervention through the unconventional and counter intuitive functions of a terminal. It explores a twilight zone version of a tool that is meant to be helpful, but isn’t helpful and a tool that is supposed to be efficient, becomes more of an annoyance. The typical terminal is an interface integrated in every computer and is used to execute command lines. Its purpose is to easily access your computer’s data and execute a set of commands quickly. However, in this webpage, the terminal does the complete opposite. Privacy is another concern where a terminal can access a user’s entire computer database but without seeing the actual content. In TERMINAL, the user’s facial identity, voice and location is captured, which is meant to show exposure of the user, rather than keeping them confidential. Lastly, obscurity is another key element in the experience of this webpage. Not knowing what to do or the lack of direction and purpose is meant to make the user question how much of technology we should trust and whether we should see it in a more humanizing way. The TERMINAL in return dehumanizes us, as the user for the way that we treat it.
 
