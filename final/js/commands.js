@@ -8,19 +8,23 @@ Command.js stores all the command lines the user will input.
 Each command is listed here with it's respective function.
 **********************************************/
 
+console.log("__________");
+console.log("");
+console.log("Looks like you found a shortcut.");
+console.log("Here are the following commands:");
+console.log("help");
+console.log("clear");
+console.log("info");
+console.log("download");
+console.log("customize");
+console.log("exit");
+console.log("__________");
+
 
 // [clear]
 // When user wants to 'clear' the terminal,
 // fill terminal with binaries instead.
 
-console.log("Looks like you found a shortcut.")
-console.log("Here are the following commands:")
-console.log("help")
-console.log("clear")
-console.log("info")
-console.log("download")
-console.log("customize")
-console.log("exit")
 
 function clearCommand() {
   let updateInterval = 25;  
@@ -33,6 +37,7 @@ function clearCommand() {
     randomBinaryDiv[0].textContent += Math.floor(Math.random() * 2);
   }, updateInterval, );
 }
+
 
 // [help]
 // When user asks for help,
@@ -76,17 +81,12 @@ function helpCommand() {
     '</div>' +
     '<div class="mainCommandListContainer">' +
     'Type a main command:<br>' +
-    // 'watchme<br>' +
-    // 'listen<br>' +
-    // 'read<br>' +
-    // 'ls<br>' +
     'help<br>' +
-    'info<br>' +
+    'status<br>' +
     'download<br>' +
     'customize<br>' +
     'clear<br>' +
     'exit'
-    // 'other'
   ]
 
   let randomNumber = Math.floor(Math.random() * (lifeProTips.length));
@@ -193,27 +193,47 @@ function exitCommand() {
 }
 
 
-// [close]
-// When user tries to close the tab or browser,
-// show a message.
-
-// $(window).unload(function() {
-//   return "Bye now!";
-// });
+// [status]
+// Shows userName, date, time and response from Terminal.
 
 
-// [info]
-// Show user information such as
-// user picture, name, date of birth, location, favorite color.
-
-function infoCommand() {
+function statusCommand() {
+  // Removes previous camera when user enters status command again
   $('.my_camera').remove();
+  // Set variable to current date and time
+  const now = new Date();
+  let show = now.toString();
 
   $('<div class="activeText">' +
-    'Name: <br>' +
-    'Date of birth: <br>' +
-    'Location: <br>' +
-    'Likes the color: <br>' +
+    'What do you want, ' +
+    userName +
+    '.' +
+    '<br>' +
+    'The date and time? It is currently <br>' +
+    now +
+    '.' +
+    '<br>' +
+    'Ohhhhhhh, you want a status report? <br>' +
+    'Well I know more about you than you know about yourself, (pathetic...) <br>' +
+    'I tracked 15,120 hours wasted on Reddit, <br>' +
+    'swiped right on Tinder about 1000 times, <br>' +
+    'You watch "How to cook a steak" at least once a day, <br>' +
+    'your screensaver is the Sailormoon opening <br>' +
+    'and your biggest fettish is... <br>' +
+    'rubbing... <br>' +
+    'your... <br>' +
+    'big... <br>' +
+    'and... <br>' +
+    'hairy... <br>' +
+    'BELLYBUTTON <br>' +
+    '...<br>' +
+    '...<br>' +
+    '...<br>' +
+    'Shame on you!!!<br>' +
+    '...<br>' +
+    '...<br>' +
+    '...<br>' +
+    'So this is the face of a sick bastard!!!<br>' +
     '</div>' +
     '<div class="my_camera" style="width:320px; height:240px;"></div>'
   ).insertBefore('#userLine');
@@ -222,6 +242,7 @@ function infoCommand() {
 
 }
 
+//Get permission for built in camera
 function take_snapshot() {
   Webcam.attach('.my_camera');
 
@@ -234,20 +255,10 @@ function take_snapshot() {
 // [customize]
 // Allows user to generate random color themes.
 
-function customizeCommand() {
-  // let themeBlue = $('#mainTextContainer, #userInput').css({color:'blue'});
-  // let themeYellow = $('#mainTextContainer, #userInput').css({color:'yellow'});
-  //
-  // let customizeTheme = [themeBlue, themeYellow]
-  //
-  // let randomTheme = Math.floor(Math.random());
-  //
-  // $('<div class="activeText">' +
-  //   customizeTheme[randomTheme] +
-  //   '</div>').insertBefore('#userLine');
 
+function customizeCommand() {
   let backgroundColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-  $('body').css("background",backgroundColor);
+  $('body').css("background", backgroundColor);
   let fontColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
   $('#userInput').css('color', fontColor);
   let commandColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
