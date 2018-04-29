@@ -1,6 +1,6 @@
-DART 450, Winter 2018
-Final
-Kathleen Capiral
+- DART 450, Winter 2018
+- Final
+- Kathleen Capiral
 
 ### Terminal 20.1.8
 
@@ -19,11 +19,11 @@ The user first lands on the webpage with just the standard beginning text of any
 The main commands and easter egg interactions are the main functionalities of this webpage. Each of the commands and interactions are coded in the commands.js file separate from the main.js. On the commands.js file, it includes the function for each command and interaction. The webpage uses APIs such as Google Maps, WebRTC, responsiveVoice, download, etc.
 
 ### Interactions
-help command (Randomizes life pro tips)
-status command (Lists user name, date/time, triggers live WebRTC preview)
-download command (Randomizers an automatic download file with ResponsiveVoice)
-customize command (Randomly generates background and font colors)
-clear command (Triggers randomly generated and infinite binary code)
-exit command (Opens social media websites)
-invalid command (ResponsiveVoice activated)
-alert (When user leaves window, an alert appears with user's address)
+- help command (Randomizes life pro tips)
+- status command (Lists user name, date/time, triggers live WebRTC preview)
+- download command (Randomizers an automatic download file with ResponsiveVoice)
+- customize command (Randomly generates background and font colors)
+- clear command (Triggers randomly generated and infinite binary code)
+- exit command (Opens social media websites)
+- invalid command (ResponsiveVoice activated)
+- alert (When user leaves window, an alert appears with user's address)
